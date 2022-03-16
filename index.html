@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Validação de Formulário</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="screen">
+            <div class="leftside">
+                <img src="images/financial_data.png" alt="Imagem">
+            </div>
+            <div class="rightside">
+                <h1>Crie uma conta</h1>
+                <form action="cadastro.php" method="post" class="b7validator">
+                    <label>
+                        Seu nome: <br>
+                        <input type="text" name="name" id="name" data-rules="required|min=2">
+                    </label>
+                    <label>
+                        Seu e-mail: <br>
+                        <input type="text" name="email" id="email" data-rules="required|email">
+                    </label>
+                    <label>
+                        Sua senha: <br>
+                        <input type="password" name="senha" id="senha" data-rules="required|min=4">
+                    </label>
+                    <label>
+                        <input type="submit" value="Cadastre-se">
+                    </label>
+                </form>
+
+                <div>
+                    Já tem uma conta?
+                    <a href="#">Faça o Login</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js" async defer></script>
+    </body>
+</html>
